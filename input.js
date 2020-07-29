@@ -21,7 +21,14 @@ const setupInput = function(conn) {
         conn.write('Move: down');
       } else if (key === 'd') {
         conn.write('Move: right')
+      } else if (key === 'h') {
+        conn.write('Say: Hello');
+      } else if (key === 'j') {
+        conn.write('Say: Sup?') 
+      } else if (key === 'k') {
+        conn.write('Say: GOT YOU! :P')
       }
+
     });
   }
 
@@ -32,4 +39,5 @@ console.log("w = Move: up");
 console.log("a = Move: left");
 console.log("s = Move: down");
 console.log("d = Move: right");
+console.log("If you want to send a message: h = Hello, j = Sup?, k = GOT YOU! :P")
 module.exports = {setupInput};
