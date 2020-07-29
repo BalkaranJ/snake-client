@@ -11,8 +11,9 @@ const connect = function() {
     console.log('Successfully connected to game server');
     //Sending a name
     console.log('Name: BSJ');
+    
   });
-
+  
   //interpret incoming data as text
   conn.setEncoding('utf8');
 
@@ -22,6 +23,7 @@ const connect = function() {
     console.log('You died because you idled');
   });
 
+  
 
   return conn;
 }
