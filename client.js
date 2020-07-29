@@ -7,11 +7,10 @@ const connect = function() {
     port: 50541
   });
   //Connect Event Handler, Print message to the screen when the connection is successfully established
-  conn.on('connect', (conn) => {
+  conn.on('connect', () => {
     console.log('Successfully connected to game server');
     //Sending a name
-    console.log('Name: BSJ');
-    
+    conn.write('Name: BSJ');
   });
   
   //interpret incoming data as text
